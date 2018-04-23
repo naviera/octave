@@ -4,6 +4,6 @@ A=rand(m,n)*50;
 b=rand(m,1)*50;
 
 tau=500;
-NITER=500000;
+NITER=8000;
 FOM(A,b,tau,NITER)
 
