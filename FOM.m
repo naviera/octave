@@ -79,10 +79,23 @@ for t = 1:NITER,
   solarray(t,5) = angle;
   printf("%6i %10.6f %10.6f %10.6f %10.6f  %10.6f \n",t,optval,thetak,norm(xk,1),aux,angle);
   fflush(stdout);
+  vecsol(t,1)=optval;
 end
  
 cpufinal = cputime-cpuini
 sol = xk;
+contador_0=0;
+contador_otros=0;
+#for k=1:m
+#  if xk(k)<1:
+#    contador_0+=1
+#  else:
+#    contador_otros+=1
+#end
+stem(sort(sol),".")
+#plot(vecsol);
+    
+
 
 
 endfunction
